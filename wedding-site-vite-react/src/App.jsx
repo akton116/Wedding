@@ -16,23 +16,17 @@ const DATE = {
   display: ", May 23, 2026",
 };
 const VENUE = {
-  name: "Powell Butte Rec Center",
-  address: ", Powell Butte, OR",
-  mapUrl: "https://maps.app.goo.gl/9DziAZfyJwu94P2f7",
+  name: "Powell Butte Community Center",
+  address: "8404 SW Reif Rd Powell Butte, OR 97753",
+  mapUrl: "https://www.mapquest.com/us/oregon/powell-butte-community-center-534032901",
 };
 const CONTACT = {
   email: "HarrisBryce01@gmail.com",
   phone: "541-662-2240",
 };
 const REGISTRIES = [
-  { name: "Amazon", url: "https://amazon.com", note: "Household & kitchen" },
-  { name: "Target", url: "https://target.com", note: "Home & linens" },
-  { name: "Honeyfund", url: "https://honeyfund.com", note: "Honeymoon fund" },
-];
-const HOTEL_BLOCKS = [
-  { name: "Garden Inn", distance: "0.8 mi", url: "#", code: "WED20" },
-  { name: "Riverside Suites", distance: "1.3 mi", url: "#", code: "A&J2026" },
-];
+  { name: "Amazon", url: "https://www.amazon.com/hz/wishlist/ls/1UE1LOA1ZQVN9?ref_=wl_share", note: "Amazon Wishlist" },
+  { name: "Honeymoon fund", url: "https://venmo.com/Bryce-Harris-27", note: "Honeymoon fund" },
 const SCHEDULE = [
   { time: "4:00 PM", title: "Guest Arrival", desc: "Find your seat, enjoy a welcome drink." },
   { time: "4:30 PM", title: "Ceremony", desc: "Our vows under the willow." },
