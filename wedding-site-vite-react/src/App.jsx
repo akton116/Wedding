@@ -240,7 +240,7 @@ export default function WeddingSite() {
         <h2 className="text-2xl md:text-3xl font-serif mb-6 flex items-center gap-3"><ImageIcon className="h-6 w-6 text-rose-600"/> Photos</h2>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
           {[
-            "https://i.imgur.com/AKkzAJi.jpeg",
+            "https://i.imgur.com/AKkzAJ.jpeg",
             "https://i.imgur.com/W64nBbE.jpeg",
             "https://i.imgur.com/bqrrpPV.jpeg",
             "https://images.unsplash.com/photo-1522673607200-7f18f4d1d5e2?q=80&w=1200&auto=format&fit=crop",
