@@ -252,21 +252,6 @@ export default function WeddingSite() {
         </div>
       </section>
 
-      {/* Map */}
-      <section className="bg-white/70 border-y">
-        <div className="mx-auto max-w-6xl px-4 py-16">
-          <h2 className="text-2xl md:text-3xl font-serif mb-6 flex items-center gap-3"><MapPin className="h-6 w-6 text-rose-600"/> Venue Map</h2>
-          <div className="rounded-2xl border overflow-hidden shadow-sm">
-            {/* Replace with your Google Maps embedded link */}
-            <iframe
-              title="Venue Map"
-              src="<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2859.1513488109563!2d-121.0269091!3d44.224542299999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54b92a1f73ad27f5%3A0x5d87ce4dd258353d!2sPowell%20Butte%20Community%20Center!5e0!3m2!1sen!2sus!4v1761075128979!5m2!1sen!2sus"
-              width="100%" height="360" loading="lazy" referrerPolicy="no-referrer-when-downgrade"
-            />
-          </div>
-        </div>
-      </section>
-
       {/* FAQ */}
       <section id="faq" className="mx-auto max-w-4xl px-4 py-16">
         <h2 className="text-2xl md:text-3xl font-serif mb-6 flex items-center gap-3"><Info className="h-6 w-6 text-rose-600"/> FAQ</h2>
