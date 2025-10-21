@@ -158,6 +158,7 @@ export default function WeddingSite() {
             <p className="mt-3 text-slate-600">Garden party attire. Ceremony outdoors; reception indoors.</p>
           </div>
         </div>
+      </section>
       {/* Schedule */}
       <section id="schedule" className="bg-white/70 border-y">
         <div className="mx-auto max-w-6xl px-4 py-16">
@@ -239,9 +240,9 @@ export default function WeddingSite() {
         <h2 className="text-2xl md:text-3xl font-serif mb-6 flex items-center gap-3"><ImageIcon className="h-6 w-6 text-rose-600"/> Photos</h2>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
           {[
-            "https://imgur.com/gallery/wife-GNOLdr7",
-            "https://imgur.com/gallery/hug-eXrAnY6",
-            "https://imgur.com/gallery/love-oJw78pE",
+            "https://i.imgur.com/AKkzAJi.jpeg",
+            "https://i.imgur.com/W64nBbE.jpeg",
+            "https://i.imgur.com/bqrrpPV.jpeg",
             "https://images.unsplash.com/photo-1522673607200-7f18f4d1d5e2?q=80&w=1200&auto=format&fit=crop",
             "https://images.unsplash.com/photo-1509579312009-48b3a4abf0ff?q=80&w=1200&auto=format&fit=crop",
             "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=1200&auto=format&fit=crop",
