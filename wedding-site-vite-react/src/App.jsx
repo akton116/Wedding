@@ -260,7 +260,7 @@ export default function WeddingSite() {
             {/* Replace with your Google Maps embedded link */}
             <iframe
               title="Venue Map"
-              src="<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2859.1513488109563!2d-121.0269091!3d44.224542299999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54b92a1f73ad27f5%3A0x5d87ce4dd258353d!2sPowell%20Butte%20Community%20Center!5e0!3m2!1sen!2sus!4v1761075128979!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>"
+              src="<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2859.1513488109563!2d-121.0269091!3d44.224542299999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54b92a1f73ad27f5%3A0x5d87ce4dd258353d!2sPowell%20Butte%20Community%20Center!5e0!3m2!1sen!2sus!4v1761075128979!5m2!1sen!2sus"
               width="100%" height="360" loading="lazy" referrerPolicy="no-referrer-when-downgrade"
             />
           </div>
