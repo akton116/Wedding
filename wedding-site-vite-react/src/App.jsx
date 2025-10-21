@@ -243,9 +243,6 @@ export default function WeddingSite() {
             "https://i.imgur.com/AKkzAJi.jpeg",
             "https://i.imgur.com/W64nBbE.jpeg",
             "https://i.imgur.com/bqrrpPV.jpeg",
-            "https://images.unsplash.com/photo-1522673607200-7f18f4d1d5e2?q=80&w=1200&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1509579312009-48b3a4abf0ff?q=80&w=1200&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=1200&auto=format&fit=crop",
           ].map((src, i) => (
             <img key={i} src={src} alt="Gallery" className="h-44 md:h-56 w-full object-cover rounded-xl border"/>
           ))}
