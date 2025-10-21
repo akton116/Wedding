@@ -12,8 +12,8 @@ const COUPLE = {
 };
 const DATE = {
   // Use a real date/time in your timezone
-  iso: "2026-05-23T16:30:00", // May 23, 2026 @ 4:30 PM
-  display: ", May 23, 2026",
+  iso: "2026-05-23T16:00:00", // May 23, 2026 @ 4:00 PM
+  display: "May 23, 2026",
 };
 const VENUE = {
   name: "Powell Butte Community Center",
@@ -26,16 +26,11 @@ const CONTACT = {
 };
 const REGISTRIES = [
   { name: "Amazon", url: "https://www.amazon.com/hz/wishlist/ls/1UE1LOA1ZQVN9?ref_=wl_share", note: "Amazon Wishlist" },
-  { name: "Target", url: "https://target.com", note: "Home & linens" },
   { name: "Venmo", url: "https://venmo.com/Bryce-Harris-27", note: "Honeymoon fund" },
-];
-const HOTEL_BLOCKS = [
-  { name: "Garden Inn", distance: "0.8 mi", url: "#", code: "WED20" },
-  { name: "Riverside Suites", distance: "1.3 mi", url: "#", code: "A&J2026" },
 ];
 const SCHEDULE = [
   { time: "4:00 PM", title: "Guest Arrival", desc: "Find your seat, enjoy a welcome drink." },
-  { time: "4:30 PM", title: "Ceremony", desc: "Our vows under the willow." },
+  { time: "4:30 PM", title: "Ceremony", desc: "Our vows with a view of the mountains." },
   { time: "5:15 PM", title: "Cocktail Hour", desc: "Snacks, photos, & mingling." },
   { time: "6:30 PM", title: "Dinner", desc: "Family-style service." },
   { time: "8:00 PM", title: "Dancing", desc: "Bring your best moves." },
@@ -43,9 +38,9 @@ const SCHEDULE = [
 ];
 const FAQS = [
   { q: "What should I wear?", a: "Garden party attire—pastels, florals, comfortable shoes for grass." },
-  { q: "Is the ceremony outdoors?", a: "Yes. We’ll have shade and water stations. In case of rain, the barn is our backup." },
-  { q: "Can I bring kids?", a: "We love your little ones, but this event is adults-only unless noted on your invitation." },
-  { q: "Where do I park?", a: "Free on-site parking. Look for signs and attendants." },
+  { q: "Is the ceremony outdoors?", a: "Yes. The ceremony will be outdoors, then we will move indoors for dinner." },
+  { q: "Can I bring kids?", a: "We love your little ones, please include them in your RSVP notes." },
+  { q: "Where do I park?", a: "Free on-site parking. Look for signs." },
 ];
 // ===========================================
 
@@ -98,8 +93,8 @@ export default function WeddingSite() {
             <a href="#schedule" className="hover:text-rose-600">Schedule</a>
             <a href="#rsvp" className="hover:text-rose-600">RSVP</a>
             <a href="#registry" className="hover:text-rose-600">Registry</a>
-            <a href="#faq" className="hover:text-rose-600">FAQ</a>
             <a href="#photos" className="hover:text-rose-600">Photos</a>
+            <a href="#faq" className="hover:text-rose-600">FAQ</a>
           </div>
           <a href="#rsvp" className="inline-flex items-center gap-2 rounded-2xl bg-rose-600 px-4 py-2 text-white text-sm shadow hover:bg-rose-700">
             <Send className="h-4 w-4" /> RSVP
@@ -163,24 +158,6 @@ export default function WeddingSite() {
             <p className="mt-3 text-slate-600">Garden party attire. Ceremony outdoors; reception indoors.</p>
           </div>
         </div>
-
-        {/* Hotels */}
-        <div className="mt-10">
-          <h3 className="text-xl font-semibold mb-4">Hotel Blocks</h3>
-          <div className="grid md:grid-cols-2 gap-4">
-            {HOTEL_BLOCKS.map((h) => (
-              <div key={h.name} className="rounded-2xl border bg-white p-5 shadow-sm flex items-center justify-between">
-                <div>
-                  <div className="font-medium">{h.name}</div>
-                  <div className="text-sm text-slate-500">{h.distance} away • Code: {h.code}</div>
-                </div>
-                <a href={h.url} className="rounded-xl border px-4 py-2 text-sm hover:bg-rose-50">Book</a>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Schedule */}
       <section id="schedule" className="bg-white/70 border-y">
         <div className="mx-auto max-w-6xl px-4 py-16">
@@ -262,9 +239,9 @@ export default function WeddingSite() {
         <h2 className="text-2xl md:text-3xl font-serif mb-6 flex items-center gap-3"><ImageIcon className="h-6 w-6 text-rose-600"/> Photos</h2>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
           {[
-            "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?q=80&w=1200&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1529636127164-4003b512c4a8?q=80&w=1200&auto=format&fit=crop",
+            "https://imgur.com/gallery/wife-GNOLdr7",
+            "https://imgur.com/gallery/hug-eXrAnY6",
+            "https://imgur.com/gallery/love-oJw78pE",
             "https://images.unsplash.com/photo-1522673607200-7f18f4d1d5e2?q=80&w=1200&auto=format&fit=crop",
             "https://images.unsplash.com/photo-1509579312009-48b3a4abf0ff?q=80&w=1200&auto=format&fit=crop",
             "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=1200&auto=format&fit=crop",
