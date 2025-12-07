@@ -178,47 +178,89 @@ export default function WeddingSite() {
       </section>
 
       {/* RSVP */}
-      <section id="rsvp" className="mx-auto max-w-3xl px-4 py-16">
-        <h2 className="text-2xl md:text-3xl font-serif mb-6 flex items-center gap-3"><Heart className="h-6 w-6 text-rose-600"/> RSVP</h2>
-        <p className="text-slate-600 mb-6">Please RSVP by May 15, 2026. If you have any questions about dietary restrictions or accessibility, let us know.</p>
-        {/* Simple no-backend form — connect to Formspree or Google Forms */}
-        <form
-          className="rounded-2xl border bg-white p-6 shadow-sm grid gap-4"
-          action="https://formspree.io/f/your-form-id" // ← Replace with your form endpoint
-          method="POST"
-        >
-          <input type="hidden" name="_subject" value="Wedding RSVP" />
-          <div className="grid md:grid-cols-2 gap-4">
-            <label className="grid gap-2 text-sm">
-              <span>First & Last Name</span>
-              <input name="name" required className="rounded-xl border px-3 py-2" placeholder="Taylor Smith" />
-            </label>
-            <label className="grid gap-2 text-sm">
-              <span>Email</span>
-              <input name="email" type="email" required className="rounded-xl border px-3 py-2" placeholder="you@email.com" />
-            </label>
-          </div>
-          <label className="grid gap-2 text-sm">
-            <span>Will you attend?</span>
-            <select name="attendance" required className="rounded-xl border px-3 py-2">
-              <option value="accept">Joyfully accepts</option>
-              <option value="decline">Regretfully declines</option>
-            </select>
-          </label>
-          <label className="grid gap-2 text-sm">
-            <span>Guests (including you)</span>
-            <input name="guests" type="number" min="1" className="rounded-xl border px-3 py-2" placeholder="1" />
-          </label>
-          <label className="grid gap-2 text-sm">
-            <span>Dietary Restrictions / Notes</span>
-            <textarea name="notes" rows={4} className="rounded-xl border px-3 py-2" placeholder="Vegetarian, gluten-free, accessibility needs, etc." />
-          </label>
-          <button className="mt-2 inline-flex items-center gap-2 rounded-2xl bg-rose-600 px-5 py-2.5 text-white text-sm shadow hover:bg-rose-700">
-            <Send className="h-4 w-4"/> Submit RSVP
-          </button>
-          <p className="text-xs text-slate-500">This form uses a third-party endpoint. Replace the action URL with your Formspree/Google Forms link.</p>
-        </form>
-      </section>
+<section id="rsvp" className="mx-auto max-w-3xl px-4 py-16">
+  <h2 className="text-2xl md:text-3xl font-serif mb-6 flex items-center gap-3">
+    <Heart className="h-6 w-6 text-rose-600" /> RSVP
+  </h2>
+  <p className="text-slate-600 mb-6">
+    Please RSVP by May 15, 2026. If you have any questions about dietary restrictions or accessibility, let us know.
+  </p>
+
+  <form
+    className="rounded-2xl border bg-white p-6 shadow-sm grid gap-4"
+    action={`https://formsubmit.co/${CONTACT.email}`}   // ⬅ sends to HarrisBryce01@gmail.com
+    method="POST"
+  >
+    {/* FormSubmit config */}
+    <input type="hidden" name="_subject" value="Wedding RSVP" />
+    <input type="hidden" name="_template" value="table" />
+    <input type="hidden" name="_captcha" value="false" />
+    {/* where to go after successful submit (change to your real URL if needed) */}
+    <input type="hidden" name="_next" value="https://your-domain.com/#rsvp" />
+
+    {/* simple spam honeypot field (humans won't see this) */}
+    <input type="text" name="_honey" style={{ display: "none" }} />
+
+    <div className="grid md:grid-cols-2 gap-4">
+      <label className="grid gap-2 text-sm">
+        <span>First &amp; Last Name</span>
+        <input
+          name="name"
+          required
+          className="rounded-xl border px-3 py-2"
+          placeholder="Taylor Smith"
+        />
+      </label>
+      <label className="grid gap-2 text-sm">
+        <span>Email</span>
+        <input
+          name="email"
+          type="email"
+          required
+          className="rounded-xl border px-3 py-2"
+          placeholder="you@email.com"
+        />
+      </label>
+    </div>
+
+    <label className="grid gap-2 text-sm">
+      <span>Will you attend?</span>
+      <select name="attendance" required className="rounded-xl border px-3 py-2">
+        <option value="Joyfully accepts">Joyfully accepts</option>
+        <option value="Regretfully declines">Regretfully declines</option>
+      </select>
+    </label>
+
+    <label className="grid gap-2 text-sm">
+      <span>Guests (including you)</span>
+      <input
+        name="guests"
+        type="number"
+        min="1"
+        className="rounded-xl border px-3 py-2"
+        placeholder="1"
+      />
+    </label>
+
+    <label className="grid gap-2 text-sm">
+      <span>Dietary Restrictions / Notes</span>
+      <textarea
+        name="notes"
+        rows={4}
+        className="rounded-xl border px-3 py-2"
+        placeholder="Vegetarian, gluten-free, accessibility needs, etc."
+      />
+    </label>
+
+    <button className="mt-2 inline-flex items-center gap-2 rounded-2xl bg-rose-600 px-5 py-2.5 text-white text-sm shadow hover:bg-rose-700">
+      <Send className="h-4 w-4" /> Submit RSVP
+    </button>
+
+    <p className="text-xs text-slate-500">
+      Your response will be sent directly to our email.
+    </p>
+  </form>
+</section>
 
       {/* Registry */}
       <section id="registry" className="bg-white/70 border-y">
