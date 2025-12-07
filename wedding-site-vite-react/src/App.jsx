@@ -187,79 +187,53 @@ export default function WeddingSite() {
   </p>
 
   <form
-    className="rounded-2xl border bg-white p-6 shadow-sm grid gap-4"
-    action={`https://formsubmit.co/${CONTACT.email}`}   // ⬅ sends to HarrisBryce01@gmail.com
-    method="POST"
-  >
-    {/* FormSubmit config */}
-    <input type="hidden" name="_subject" value="Wedding RSVP" />
-    <input type="hidden" name="_template" value="table" />
-    <input type="hidden" name="_captcha" value="false" />
-    {/* where to go after successful submit (change to your real URL if needed) */}
-    <input type="hidden" name="_next" value="https://your-domain.com/#rsvp" />
+  className="rounded-2xl border bg-white p-6 shadow-sm grid gap-4"
+  action="https://formsubmit.co/HarrisBryce01@gmail.com"
+  method="POST"
+>
+  <input type="hidden" name="_subject" value="Wedding RSVP" />
+  <input type="hidden" name="_template" value="table" />
+  <input type="hidden" name="_captcha" value="false" />
 
-    {/* simple spam honeypot field (humans won't see this) */}
-    <input type="text" name="_honey" style={{ display: "none" }} />
+  {/* ✔ This displays a clean success page */}
+  <input type="hidden" name="_success" value="RSVP Sent! Thank you ❤️" />
 
-    <div className="grid md:grid-cols-2 gap-4">
-      <label className="grid gap-2 text-sm">
-        <span>First &amp; Last Name</span>
-        <input
-          name="name"
-          required
-          className="rounded-xl border px-3 py-2"
-          placeholder="Taylor Smith"
-        />
-      </label>
-      <label className="grid gap-2 text-sm">
-        <span>Email</span>
-        <input
-          name="email"
-          type="email"
-          required
-          className="rounded-xl border px-3 py-2"
-          placeholder="you@email.com"
-        />
-      </label>
-    </div>
+  {/* spam honeypot */}
+  <input type="text" name="_honey" style={{ display: "none" }} />
 
+  <div className="grid md:grid-cols-2 gap-4">
     <label className="grid gap-2 text-sm">
-      <span>Will you attend?</span>
-      <select name="attendance" required className="rounded-xl border px-3 py-2">
-        <option value="Joyfully accepts">Joyfully accepts</option>
-        <option value="Regretfully declines">Regretfully declines</option>
-      </select>
+      <span>First & Last Name</span>
+      <input name="name" required className="rounded-xl border px-3 py-2" />
     </label>
-
     <label className="grid gap-2 text-sm">
-      <span>Guests (including you)</span>
-      <input
-        name="guests"
-        type="number"
-        min="1"
-        className="rounded-xl border px-3 py-2"
-        placeholder="1"
-      />
+      <span>Email</span>
+      <input name="email" type="email" required className="rounded-xl border px-3 py-2" />
     </label>
+  </div>
 
-    <label className="grid gap-2 text-sm">
-      <span>Dietary Restrictions / Notes</span>
-      <textarea
-        name="notes"
-        rows={4}
-        className="rounded-xl border px-3 py-2"
-        placeholder="Vegetarian, gluten-free, accessibility needs, etc."
-      />
-    </label>
+  <label className="grid gap-2 text-sm">
+    <span>Will you attend?</span>
+    <select name="attendance" required className="rounded-xl border px-3 py-2">
+      <option value="Joyfully accepts">Joyfully accepts</option>
+      <option value="Regretfully declines">Regretfully declines</option>
+    </select>
+  </label>
 
-    <button className="mt-2 inline-flex items-center gap-2 rounded-2xl bg-rose-600 px-5 py-2.5 text-white text-sm shadow hover:bg-rose-700">
-      <Send className="h-4 w-4" /> Submit RSVP
-    </button>
+  <label className="grid gap-2 text-sm">
+    <span>Guests (including you)</span>
+    <input name="guests" type="number" min="1" className="rounded-xl border px-3 py-2" />
+  </label>
 
-    <p className="text-xs text-slate-500">
-      Your response will be sent directly to our email.
-    </p>
-  </form>
+  <label className="grid gap-2 text-sm">
+    <span>Dietary Restrictions / Notes</span>
+    <textarea name="notes" rows={4} className="rounded-xl border px-3 py-2" />
+  </label>
+
+  <button className="mt-2 inline-flex items-center gap-2 rounded-2xl bg-rose-600 px-5 py-2.5 text-white text-sm shadow hover:bg-rose-700">
+    <Send className="h-4 w-4" /> Submit RSVP
+  </button>
+</form>
 </section>
 
       {/* Registry */}
