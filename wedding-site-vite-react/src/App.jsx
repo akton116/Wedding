@@ -29,12 +29,12 @@ const REGISTRIES = [
   { name: "Venmo", url: "https://venmo.com/Bryce-Harris-27", note: "Honeymoon fund" },
 ];
 const SCHEDULE = [
-  { time: "4:00 PM", title: "Guest Arrival", desc: "Find your seat, enjoy a welcome drink." },
-  { time: "4:30 PM", title: "Ceremony", desc: "Our vows with a view of the mountains." },
-  { time: "5:15 PM", title: "Cocktail Hour", desc: "Snacks, photos, & mingling." },
-  { time: "6:30 PM", title: "Dinner", desc: "Family-style service." },
-  { time: "8:00 PM", title: "Dancing", desc: "Bring your best moves." },
-  { time: "10:30 PM", title: "Send-Off", desc: "Sparklers & farewell." },
+  { time: "3:30 PM", title: "Guest Arrival", desc: "Find your seat, enjoy a welcome drink." },
+  { time: "4:00 PM", title: "Ceremony", desc: "Our vows with a view of the mountains." },
+  { time: "4:30 PM", title: "Cocktail Hour", desc: "Snacks, photos, & mingling." },
+  { time: "5:30 PM", title: "Dinner", desc: "Family-style service." },
+  { time: "7:00 PM", title: "Dancing", desc: "Bring your best moves." },
+  { time: "9:30 PM", title: "Send-Off", desc: "Sparklers & farewell." },
 ];
 const FAQS = [
   { q: "What should I wear?", a: "Garden party attire—pastels, florals, comfortable shoes for grass." },
@@ -153,9 +153,9 @@ export default function WeddingSite() {
           <div className="rounded-2xl border bg-white p-6 shadow-sm">
             <div className="flex items-center gap-3">
               <Info className="h-5 w-5 text-rose-600" />
-              <h3 className="font-semibold">Dress Code</h3>
+              <h3 className="font-semibold">Guest Attire</h3>
             </div>
-            <p className="mt-3 text-slate-600">Garden party attire. Ceremony outdoors; reception indoors.</p>
+            <p className="mt-3 text-slate-600">Garden party attire, avoid whites, Ceremony outdoors; reception indoors.</p>
           </div>
         </div>
       </section>
@@ -183,7 +183,7 @@ export default function WeddingSite() {
     <Heart className="h-6 w-6 text-rose-600" /> RSVP
   </h2>
   <p className="text-slate-600 mb-6">
-    Please RSVP by May 15, 2026. If you have any questions about dietary restrictions or accessibility, let us know.
+    Please RSVP by March 23, 2026. If you have any questions about dietary restrictions or accessibility, let us know.
   </p>
 
   <form
@@ -294,4 +294,3 @@ export default function WeddingSite() {
     </div>
   );
 }
-
