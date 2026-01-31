@@ -29,7 +29,7 @@ const REGISTRIES = [
   { name: "Venmo", url: "https://venmo.com/Bryce-Harris-27", note: "Honeymoon fund" },
 ];
 const SCHEDULE = [
-  { time: "3:30 PM", title: "Guest Arrival", desc: "Find your seat, enjoy a welcome drink." },
+  { time: "3:30 PM", title: "Guest Arrival", desc: "Find your seat." },
   { time: "4:00 PM", title: "Ceremony", desc: "Our vows with a view of the mountains." },
   { time: "4:30 PM", title: "Cocktail Hour", desc: "Snacks, photos, & mingling." },
   { time: "5:30 PM", title: "Dinner", desc: "Family-style service." },
